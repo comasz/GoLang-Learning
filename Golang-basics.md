@@ -46,7 +46,7 @@ func main() {
 	var n = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
 	// Omit size of array it will hold only the amount of values declared. known as slice
 	var m = []float32{10500.0, 5.0, 7.4, 6.0}
-	
+
 	// output each array element's value
 	for i := range n {
 		fmt.Println(n[i])
@@ -83,13 +83,15 @@ func main() {
    Book2.author = "Zara Ali"
    Book2.subject = "Telecom Billing Tutorial"
    Book2.book_id = 6495700
+   }
+}
    ```
    
-   ### Map 
-   Group of key-value pairs much like a dictionary.
-   ```go
-   package main
-   import "fmt"
+### Map 
+Group of key-value pairs much like a dictionary.
+```go
+package main
+import "fmt"
    
 func main() {
 	var countryCapitalMap map[string]string // declare map variable
@@ -114,12 +116,17 @@ func main() {
 	} else {
 	   fmt.Println("Capital of United States is not present") 
 	}
+	
+	for i := range countryCapitalMap{
+		fmt.Println(i)
+	}
 }
  ```
+ note: Map keys are stored in random order. If you are looking to maintain order use `orderedmap` package instead.
  
-   ### Pointers
-   Allows memory addresses to be referenced so referenced values arent copies to a new memory address. 
-   You must declare a pointer before you can use it to store any variable address
+### Pointers
+Allows memory addresses to be referenced so referenced values arent copies to a new memory address. 
+You must declare a pointer before you can use it to store any variable address
 ```go
 package main
 import "fmt"
